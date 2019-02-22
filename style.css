@@ -1,0 +1,479 @@
+/*
+Theme Name: Evoluçao Coach - Theme
+Theme URI: https://www.evolucaocoach.com.br
+Author: Rodolfo Marques e Nathalia Clementino
+Author URI:
+Description: Tema desenvolvido para o Evolução Coach
+Version: 1.0
+Text Domain: evolucaocoachtheme
+*/
+
+* {
+    margin: 0px 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+:root{
+
+    --azul-escuro: #093656;
+    --azul-claro: #2A88C5;
+    --cor-amarelo: black;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+
+    text-decoration: none;
+}
+
+a:visited {
+
+    text-decoration: none;
+    color: var(--azul-claro);
+}
+
+.botao_padrao {
+
+    border: 2px solid var(--azul-claro);
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: var(--azul-claro);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.titulos{
+
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--azul-escuro);
+    text-transform: uppercase;
+
+}
+
+.paragrafos {
+
+    text-align: justify;
+    padding: 0px 15px;
+    margin-top: 20px;
+
+}
+
+.central {
+
+    grid-column-start: 2;
+
+}
+
+i.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 36px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+#main-grid {
+    display: grid;
+    grid-template-columns: 1fr minmax(280px, 1080px) 1fr;
+    grid-template-rows: repeat(8 auto);
+
+}
+
+/* Topo da Página */
+
+div#page-top-bg {
+
+    grid-column: 1 / 4;
+    grid-row: 1/2;
+    
+}
+
+div#page-top-bg > img {
+
+    object-fit: cover; 
+    width: 100%;
+    height: 100%;
+
+}
+
+
+#page-top{
+
+    height: 100vh;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+div.menu {
+
+    padding: 0% 2% 2% 2%;
+    grid-row-start: 1;
+    z-index: 100;
+    background-image: url(img/Menu.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-self: start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-end;
+
+}
+
+ul.menu {
+
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul li {
+
+    list-style-type: none;
+    padding: 0 5px;
+
+}
+
+ul.menu li a {
+
+    color: white;
+    font-weight: bold;
+    
+}
+
+div#logo_page-top_container{
+
+    height: 60vh;
+    margin-top: 100px;
+    display: flex;
+    
+}
+
+img#logo_page-top{
+
+    width: 100%;
+    align-self: center
+
+}
+
+/* Área do Blog */
+
+#blog {
+ 
+    margin: 50px 0px;
+    grid-column-start: 2;
+    grid-row-start: 2;
+
+}
+
+#grid-postagens {
+
+    margin: 20px 15px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(280px, 2fr));
+    grid-template-rows: repeat(2, 280px);
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
+  }
+
+  @media (max-width: 720px){
+    #grid-postagens {
+
+        display: grid;
+        grid-template-columns: minmax(280px, 1fr);
+        grid-template-rows: repeat(auto-fill, 280px);
+        grid-column-gap: 2em;
+        grid-row-gap: 2em;
+      }
+  }
+  
+  div#postagem-atual {
+  
+    grid-row: span 2;
+    border-radius: 10px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2em;
+    text-transform: capitalize;
+  }
+
+  
+  .postagem {
+  
+    background: #000038;
+    border-radius: 10px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5em 2em;
+    text-transform: capitalize;
+  }
+  
+  
+  div#grid-postagens div h3 {
+  
+    font-size: 1em;
+    border-left: 3px solid var(--cor-amarelo);
+    padding-left: 1em;
+    padding-top: 0.5em;
+  }
+
+/* Área de explicação sobre o coach */
+
+#area-coach-bg {
+
+    grid-column: 1 / 4;
+    grid-row: 3/4;
+    background-image: url(img/banner2.png);
+}
+
+#area-coach {
+
+    grid-column-start: 2;
+    grid-row-start: 3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+div#area-coach > div{
+
+    flex-grow: 1;
+    flex-basis: 200px;
+}
+
+div#area-coach > div#img-coach_container{
+
+    flex-grow: 1;
+    flex-basis: 280px;
+    text-align: center;
+}
+
+div#textos-coach > h3.titulos{
+
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+div#textos-coach > h4.sub-titulo {
+
+    padding: 0px 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+div#textos-coach > a.botao_padrao {
+
+    margin: 10px 15px;
+
+}
+
+img#img-coach {
+
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: -3px;
+ 
+}
+
+/* Área CTA treinamentos */
+
+#treinamentos {
+
+    grid-column-start: 2;
+    grid-row-start: 4;
+    display: flex;
+    flex-wrap: wrap;
+    height: 400px;
+
+}
+
+div#treinamentos div h3.titulos{
+
+    text-align: center;
+    margin-top: 20px;
+    
+}
+
+div#treinamentos div p {
+
+    margin-bottom: 20px;
+}
+
+
+div#treinamentos div a.botao_padrao {
+
+    margin: 10px 15px;
+
+}
+
+
+/* footer */
+
+#footer-bg {
+
+    grid-column: 1 / 4;
+    grid-row: 5/6;
+    background-image: url(img/banner5.png);
+}
+
+#footer{
+
+    grid-column-start: 2;
+    grid-row-start: 5;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+div#redes_sociais-conteiner{
+    
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 15px;
+
+}
+
+div#retorno {
+
+    display: flex;
+    align-content: center;
+}
+
+a#botoao_topo {
+
+    color: var(--azul-escuro);
+    font-weight: bold;
+    line-height: 2;
+
+}
+
+a#botoao_topo:visited {
+
+    color: var(--azul-escuro);
+    font-weight: bold;
+    line-height: 2;
+
+}
+
+div#redes_sociais {
+
+    margin: 10px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+} 
+
+div#redes_sociais > h4.titulos {
+
+    margin: 10px 10px;
+    font-size: 1em;
+    font-weight: bold;
+    width: 15ch;
+    text-align: right;
+}
+
+div#redes_sociais img {
+
+    height: 30px;
+    margin: 0px 10px;
+} 
+
+div#rodape {
+    
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+img#logo_footer{
+
+    width: 30%;
+    margin: 10px 15px;
+}
+
+div#creditos {
+
+    grid-column: 1 / 4;
+    grid-row: 6/7;
+    background-color: var(--azul-escuro);
+    color: white;
+    text-align: center;
+
+}
+
+@media (max-width: 630px){
+
+    div#redes_sociais-conteiner{
+    
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 15px;
+    
+    }
+
+    div#redes_sociais img {
+
+        height: 30px;
+        margin: 0px 5px;
+    } 
+
+    div#rodape {
+    
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+}
